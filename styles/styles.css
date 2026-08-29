@@ -1,0 +1,56 @@
+:root {
+    --azul-oscuro: #0A122A;
+    --blanco: #FBFAF8;
+    --negro: #000;
+    --gris: #797B84;
+
+    --fuente-principal: "Nunito Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--blanco);
+    font-family: var(--fuente-principal);
+    color: var(--negro);
+}
+
+a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.contenedor {
+    max-width: min(120rem, 95%);
+    margin: 0 auto;
+}
