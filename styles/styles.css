@@ -1,8 +1,16 @@
 :root {
-    --azul-oscuro: #0A122A;
-    --blanco: #FBFAF8;
-    --negro: #000;
-    --gris: #797B84;
+    --azul-oscuro: #0A122A; /* Fondo principal oscuro */
+    --azul-medio: #1B2A4A; /* Cards oscuras */
+    --azul-claro: #2E4A78; /* Hover / detalles */
+
+    --blanco: #FBFAF8; /* Texto claro */
+    --blanco-suave: #F1F2F4; /* Fondo claro */
+
+    --negro: #000000;
+    --gris: #797B84; /* Texto secundario */
+
+    --gris-claro: #D9DCE3; /* Bordes */
+    --celeste-acento: #4F8EDC; /* Botones / acento */
 
     --fuente-principal: "Nunito Sans", sans-serif;
 }
