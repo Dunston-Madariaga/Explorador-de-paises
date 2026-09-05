@@ -39,13 +39,14 @@
             <div class="controles__filtrar">
                 <label for="filtrar">Filtrar Por Región</label>
                 <select id="filtrar">
-                    <option selected disabled>Selecciona una región</option>
-                    <option>América</option>
-                    <option>Europa</option>
-                    <option>Asia</option>
-                    <option>Oceanía</option>
-                    <option>África</option>
-                    <option>Antártida</option>
+                    <option value="" selected disabled>Selecciona una región</option>
+                    <option value="todas">Todas las regiones</option>
+                    <option value="america">América</option>
+                    <option value="europa">Europa</option>
+                    <option value="asia">Asia</option>
+                    <option value="oceania">Oceanía</option>
+                    <option value="africa">África</option>
+                    <option value="antartida">Antártida</option>
                 </select>
             </div>
         </section>
@@ -53,7 +54,7 @@
         <section class="paises" id="paises">
             <h2>Países</h2>
 
-            <article class="card">
+            <article class="card" data-region="america">
                 <img class="card__img" src="assets/images/Argentina.webp" alt="Bandera de Argentina">
                 <div class="card__contenido">
                     <h3>Argentina</h3>
@@ -63,7 +64,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="america">
                 <img class="card__img" src="assets/images/Bolivia.webp" alt="Bandera de Bolivia">
                 <div class="card__contenido">
                     <h3>Bolivia</h3>
@@ -73,7 +74,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="africa">
                 <img class="card__img" src="assets/images/Egipto.webp" alt="Bandera de Egipto">
                 <div class="card__contenido">
                     <h3>Egipto</h3>
@@ -83,7 +84,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="europa">
                 <img class="card__img" src="assets/images/Alemania.webp" alt="Bandera de Alemania">
                 <div class="card__contenido">
                     <h3>Alemania</h3>
@@ -93,7 +94,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="europa">
                 <img class="card__img" src="assets/images/España.webp" alt="Bandera de España">
                 <div class="card__contenido">
                     <h3>España</h3>
@@ -103,7 +104,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="asia">
                 <img class="card__img" src="assets/images/India.webp" alt="Bandera de India">
                 <div class="card__contenido">
                     <h3>India</h3>
@@ -113,7 +114,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="europa asia">
                 <img class="card__img" src="assets/images/Rusia.webp" alt="Bandera de Rusia">
                 <div class="card__contenido">
                     <h3>Rusia</h3>
@@ -123,7 +124,7 @@
                 </div>
             </article>
 
-            <article class="card">
+            <article class="card" data-region="america">
                 <img class="card__img" src="assets/images/Venezuela.webp" alt="Bandera de Venezuela">
                 <div class="card__contenido">
                     <h3>Venezuela</h3>
