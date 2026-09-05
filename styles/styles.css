@@ -9,6 +9,7 @@
     --gris: #797B84;
     --gris-claro: #D9DCE3;
     --celeste-acento: #4F8EDC;
+    --rojo-error: #B42318;
     --fuente-principal: "Nunito Sans", sans-serif;
 }
 
@@ -85,6 +86,10 @@ body.modo-oscuro .controles select {
 
 body.modo-oscuro .controles input::placeholder {
     color: var(--gris-claro);
+}
+
+body.modo-oscuro .controles__error {
+    color: #FDA29B;
 }
 
 /* Header */
@@ -253,6 +258,51 @@ body.modo-oscuro .controles input::placeholder {
     gap: .8rem;
 }
 
+.controles__campo {
+    display: flex;
+    min-width: 0;
+    gap: .8rem;
+}
+
+.controles__campo input {
+    min-width: 0;
+    flex: 1;
+}
+
+.controles__campo button {
+    flex-shrink: 0;
+    padding: 0 1.4rem;
+    border: .1rem solid var(--celeste-acento);
+    border-radius: .7rem;
+    background-color: var(--celeste-acento);
+    color: var(--blanco);
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.controles__campo button:hover {
+    border-color: var(--azul-claro);
+    background-color: var(--azul-claro);
+}
+
+.controles__campo button:focus-visible {
+    outline: .3rem solid rgba(79, 142, 220, .35);
+    outline-offset: .2rem;
+}
+
+.controles__error {
+    grid-column: 2;
+    margin: .2rem 0 0;
+    color: var(--rojo-error);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.controles__error[hidden] {
+    display: none;
+}
+
 .controles input,
 .controles select {
     width: 100%;
@@ -304,6 +354,10 @@ body.modo-oscuro .controles input::placeholder {
 
     .controles__buscar img {
         grid-row: auto;
+    }
+
+    .controles__error {
+        grid-column: 3;
     }
 
     .controles__filtrar {

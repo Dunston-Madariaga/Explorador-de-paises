@@ -1,18 +1,54 @@
-//* Filtro de países por región
+//* Variables a usar
 const filtroRegion = document.querySelector("#filtrar");
 const tarjetas = document.querySelectorAll(".card");
 
-filtroRegion.addEventListener("change", () => {
+const formularioBusqueda = document.querySelector("#form-busqueda");
+const campoBusqueda = document.querySelector("#busqueda");
+const errorBusqueda = document.querySelector("#error-busqueda");
+
+//* Función para el filtrado y validación
+function aplicarFiltros() {
     const regionSeleccionada = filtroRegion.value;
+    const paisBuscado = campoBusqueda.value.trim().toLowerCase();
 
     tarjetas.forEach((tarjeta) => {
         const regiones = tarjeta.dataset.region.split(" ");
 
-        const mostrarTarjeta = regionSeleccionada === "todas" || regiones.includes(regionSeleccionada);
+        const nombrePais = tarjeta.querySelector("h3").textContent.toLowerCase();
 
-        tarjeta.hidden = !mostrarTarjeta;
+        const coincideRegion = 
+            regionSeleccionada === "" ||
+            regionSeleccionada === "todas" ||
+            regiones.includes(regionSeleccionada);
+
+        const coincideBusqueda =
+            paisBuscado === "" ||
+            nombrePais.includes(paisBuscado);
+
+        tarjeta.hidden = !(coincideRegion && coincideBusqueda);
     });
-});
+}
+
+//* Filtro de países por región
+filtroRegion.addEventListener("change", aplicarFiltros);
+
+//* Validación formulario
+
+formularioBusqueda.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    const paisBuscado = campoBusqueda.value.trim();
+
+    if (paisBuscado === "") {
+        errorBusqueda.textContent = "Debes escribir el nombre de un país";
+        errorBusqueda.hidden = false;
+        return;
+    }
+
+    errorBusqueda.hidden = true;
+
+    aplicarFiltros();
+})
 
 //* Modo oscuro
 const botonTema = document.querySelector(".header__tema");

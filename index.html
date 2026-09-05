@@ -33,11 +33,15 @@
     </header>
     <main>
         <section class="controles">
-            <div class="controles__buscar">
+            <form class="controles__buscar" id="form-busqueda">
                 <img src="assets/icons/Lupa.svg" alt="">
                 <label for="busqueda">Buscar país:</label>
-                <input id="busqueda" type="text" placeholder="Buscar un país...">
-            </div>
+                <div class="controles__campo">
+                    <input id="busqueda" type="text" placeholder="Buscar un país...">
+                    <button type="submit">Buscar</button>
+                </div>
+                <p class="controles__error" id="error-busqueda" aria-label="polite" hidden></p>
+            </form>
             <div class="controles__filtrar">
                 <label for="filtrar">Filtrar Por Región</label>
                 <select id="filtrar">
