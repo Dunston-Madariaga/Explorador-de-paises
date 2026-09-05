@@ -59,6 +59,34 @@ main {
     padding: 2.4rem 0 4rem;
 }
 
+/* Modo oscuro */
+body.modo-oscuro {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+body.modo-oscuro .controles,
+body.modo-oscuro .controles__buscar,
+body.modo-oscuro .controles__filtrar,
+body.modo-oscuro .card {
+    background-color: var(--azul-medio);
+}
+
+body.modo-oscuro .controles label {
+    color: var(--blanco);
+}
+
+body.modo-oscuro .controles input,
+body.modo-oscuro .controles select {
+    border-color: var(--azul-claro);
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+}
+
+body.modo-oscuro .controles input::placeholder {
+    color: var(--gris-claro);
+}
+
 /* Header */
 .header {
     display: flex;
@@ -100,17 +128,26 @@ main {
     flex-shrink: 0;
 }
 
-.header__bg img {
+.header__tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    padding: .8rem;
+    border: 0;
+    background: none;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.header__tema img {
     width: 2.8rem;
     height: 2.8rem;
 }
 
-.header__bg button {
+.header__tema span {
     display: none;
-    border: 0;
-    background: none;
-    color: var(--blanco);
-    cursor: default;
 }
 
 @media (min-width: 768px) {
@@ -154,22 +191,23 @@ main {
 
     .header__bg {
         justify-self: end;
+    }
+
+    .header__tema {
         gap: 1.2rem;
         padding: 1.2rem 1.8rem;
         border-radius: 1.2rem;
         background-color: var(--azul-medio);
+        font-size: 1.5rem;
     }
 
-    .header__bg img {
+    .header__tema img {
         width: 2.4rem;
         height: 2.4rem;
     }
 
-    .header__bg button {
+    .header__tema span {
         display: block;
-        padding: 0;
-        font-size: 1.5rem;
-        cursor: pointer;
     }
 }
 
