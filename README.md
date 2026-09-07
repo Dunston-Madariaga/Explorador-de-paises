@@ -29,6 +29,79 @@ En las siguientes etapas se continuará con la integración de datos mediante un
 
 Este diseño servirá como base para una futura implementación del Backend.
 
+## Diseño de la API
+
+### Recurso principal
+
+El recurso principal de la aplicación será **Países**, ya que representa la entidad central sobre la que trabaja el proyecto.
+
+Cada país contará inicialmente con los siguientes datos:
+
+- `id`: identificador único del país.
+- `nombre`: nombre del país.
+- `capital`: capital del país.
+- `region`: región o continente al que pertenece.
+- `poblacion`: cantidad de habitantes.
+- `bandera`: dirección de la imagen correspondiente a su bandera.
+
+### Endpoints CRUD
+
+La API utilizará rutas REST para permitir las operaciones principales sobre el recurso `paises`.
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| `GET` | `/api/paises` | Obtiene la lista de todos los países. |
+| `GET` | `/api/paises/:id` | Obtiene un país mediante su identificador. |
+| `POST` | `/api/paises` | Registra un nuevo país. |
+| `PUT` | `/api/paises/:id` | Actualiza la información de un país existente. |
+| `DELETE` | `/api/paises/:id` | Elimina un país mediante su identificador. |
+
+### Ejemplo de respuesta JSON
+
+Una respuesta para la consulta de un país podría tener la siguiente estructura:
+
+```json
+{
+    "id": 1,
+    "nombre": "Bolivia",
+    "capital": "Sucre",
+    "region": "América",
+    "poblacion": 12000000,
+    "bandera": "https://ejemplo.com/bolivia.webp"
+}
+```
+
+Para una consulta a `GET /api/paises`, la API devolvería una colección de objetos:
+
+```json
+[
+    {
+        "id": 1,
+        "nombre": "Bolivia",
+        "capital": "Sucre",
+        "region": "América",
+        "poblacion": 12000000,
+        "bandera": "https://ejemplo.com/bolivia.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Argentina",
+        "capital": "Buenos Aires",
+        "region": "América",
+        "poblacion": 46000000,
+        "bandera": "https://ejemplo.com/argentina.webp"
+    }
+]
+```
+
+### Tecnología propuesta para el Backend
+
+Para una futura implementación del Backend se propone utilizar **JavaScript con Node.js**, acompañado de **Express** para la creación de la API REST.
+
+La elección de JavaScript permite continuar utilizando el mismo lenguaje empleado actualmente en el Frontend del proyecto. Node.js permite ejecutar JavaScript en el servidor y Express facilita la creación y organización de rutas, endpoints y solicitudes HTTP.
+
+Esta tecnología permitiría mantener una base de desarrollo coherente entre el Frontend y el Backend del proyecto.
+
 ## Enlaces
 
 - GitHub Pages / repositorio: [Repositorio del proyecto](https://github.com/Dunston-Madariaga/Explorador-de-paises)
