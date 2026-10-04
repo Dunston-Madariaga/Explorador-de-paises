@@ -102,6 +102,21 @@ La elección de JavaScript permite continuar utilizando el mismo lenguaje emplea
 
 Esta tecnología permitiría mantener una base de desarrollo coherente entre el Frontend y el Backend del proyecto.
 
+## Prototipo en Figma
+
+Se desarrolló un prototipo responsive del Explorador de países utilizando la guía visual definida para el proyecto.
+
+Incluye:
+
+- guía de estilos;
+- componentes reutilizables;
+- vista principal para escritorio;
+- vista de detalle para escritorio;
+- vistas responsive para móvil;
+- navegación entre listado y detalle.
+
+[Ver prototipo en Figma](https://www.figma.com/design/MKqqsJX7LNv6vGHt5n0mru/Explorador-de-pa%C3%ADses---Prototipo?node-id=0-1&t=4HqtXprrFTd4vGRl-1)
+
 ## Enlaces
 
 - GitHub Pages / repositorio: [Repositorio del proyecto](https://github.com/Dunston-Madariaga/Explorador-de-paises)
